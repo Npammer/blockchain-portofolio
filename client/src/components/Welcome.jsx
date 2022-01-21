@@ -6,6 +6,17 @@ import { Loader } from "./";
 
 const commonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
+const Input = ({placeholder, name, type, value, handleChange}) => (
+    <input
+        placeholder={placeholder}
+        type={type}
+        step="0.0001"
+        value={value}
+        onChange={(e) => handleChange(e, name)}
+        className="my-2 w-full rounded-sm p-2 outline-none bg-trasparent text-white border-none text-sm white-glassmorphism"
+    />
+)
+
 const Welcome = () => {
 
     const connectWallet = () => {
@@ -24,7 +35,8 @@ const Welcome = () => {
                     <button
                         type="button"
                         onClick={connectWallet}
-                        className="flex flex-row justify-center times-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
+                        className="flex flex-row justify-center times-center my-5 
+                        bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
                     >
                         <p className="text-white text-base font-semibold">
                             Connect Wallet
@@ -34,16 +46,16 @@ const Welcome = () => {
                         <div className={`rounded-tl-2xl ${commonStyles}`}>
                             Reliabillity
                         </div>
-                        <div className={commonStyles}>
+                        <div className={`rounded-tr-2xl sm:rounded-none ${commonStyles}`} >
                             Security
                         </div>
-                        <div className={`rounded-tr-2xl ${commonStyles}`}>
+                        <div className={`sm:rounded-tr-2xl ${commonStyles}`}>
                             Etherium
                         </div>
-                        <div className={`rounded-bl-2xl ${commonStyles}`}>
+                        <div className={`sm:rounded-bl-2xl ${commonStyles}`}>
                             Web 3.0
                         </div>
-                        <div className={commonStyles}>
+                        <div className={`rounded-bl-2xl sm:rounded-none ${commonStyles}`}>
                             Low fees
                         </div>
                         <div className={`rounded-br-2xl ${commonStyles}`}>
@@ -69,6 +81,9 @@ const Welcome = () => {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                    <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+                        <Input placeholder="Address To" name="adressTo" type="text" handleChange={() => {}} />
                     </div>
                 </div>
             </div>
