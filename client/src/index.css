@@ -51,6 +51,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+/* TODO: Fix form Safari backround border? */
 /* white glassmorphism */
 .white-glassmorphism {
   background: rgba(255, 255, 255, 0.05);
