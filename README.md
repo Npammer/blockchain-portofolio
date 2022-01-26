@@ -13,3 +13,7 @@ An easy way to send Ether with the help of a intuitive interfase and Metamask in
 What did you learn?
 TailwindCSS:
     Tailwind uses a mobile first breakpoint system
+
+Known security flaws:
+
+Metamask private key and alchemy API url is public.
